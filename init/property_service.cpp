@@ -527,6 +527,8 @@ void load_system_props() {
      * overrides
      */
     vendor_load_properties();
+
+    load_recovery_id_prop();
 }
 
 void start_property_service() {
