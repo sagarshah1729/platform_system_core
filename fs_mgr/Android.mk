@@ -11,7 +11,8 @@ common_static_libraries := \
     libcrypto_static \
     libext4_utils_static \
     libsquashfs_utils \
-    libext2_blkid libext2_uuid
+    libext2_blkid \
+    libext2_uuid_static
 
 include $(CLEAR_VARS)
 LOCAL_CLANG := true
@@ -49,6 +50,7 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_FORCE_STATIC_EXECUTABLE := true
 LOCAL_MODULE_PATH := $(TARGET_ROOT_OUT)/sbin
 LOCAL_UNSTRIPPED_PATH := $(TARGET_ROOT_OUT_UNSTRIPPED)
+<<<<<<< HEAD
 LOCAL_STATIC_LIBRARIES := libfs_mgr \
     $(common_static_libraries) \
     libcutils \
@@ -57,6 +59,7 @@ LOCAL_STATIC_LIBRARIES := libfs_mgr \
     libsparse_static \
     libz \
     libselinux
+
 LOCAL_CXX_STL := libc++_static
 LOCAL_CFLAGS := -Werror
 include $(BUILD_EXECUTABLE)
